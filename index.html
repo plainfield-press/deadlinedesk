@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deadline Desk — Grant and deadline monitoring for small businesses</title>
+<meta name="description" content="We watch funders and agencies for you. The day a grant or deadline that fits your business opens, you hear about it. $12/month.">
+<style>
+  :root{ --paper:#f7f1e3; --ink:#2b2118; --rust:#a34a1f; --muted:#6f6353; --line:#d8cbb4; --card:#fffdf7; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  .sans{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+
+  .dateline{border-bottom:3px double var(--line);padding:14px 0;display:flex;justify-content:space-between;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .masthead{text-align:center;padding:34px 0 22px;border-bottom:1px solid var(--line)}
+  .masthead h1{font-size:2.6rem;margin:0;font-weight:700;letter-spacing:-.01em}
+  .masthead .rule{width:64px;height:3px;background:var(--rust);margin:14px auto 12px}
+  .masthead p{color:var(--muted);font-size:.98rem;margin:0;font-style:italic}
+
+  .lede{padding:26px 0;font-size:1.06rem}
+  .lede p{margin:0 0 14px}
+  .lede b{color:var(--rust)}
+
+  .watchlist{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:26px}
+  .watchlist h2{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-family:ui-sans-serif,system-ui,sans-serif;font-weight:600}
+  .watchlist ul{margin:0;padding-left:20px;font-size:.94rem}
+  .watchlist li{margin-bottom:6px}
+
+  .brief{background:var(--card);border:1px solid var(--line);padding:22px 24px;margin-bottom:28px}
+  .brief .bh{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+  .brief .bh b{font-size:1.05rem}
+  .brief .bh span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-family:ui-sans-serif,system-ui,sans-serif}
+  .brief p{font-size:.92rem;color:var(--muted);margin:0 0 10px}
+  .brief p b{color:var(--ink)}
+
+  .offer{text-align:center;padding:6px 0 36px}
+  .price{font-size:2.2rem;font-weight:700}
+  .per{color:var(--muted);font-size:.9rem}
+  .buy{display:inline-block;margin-top:14px;background:var(--rust);color:#fff;border:none;padding:13px 34px;
+    font-size:.95rem;font-weight:700;border-radius:4px;cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif;letter-spacing:.03em}
+  .buy:hover{background:#8c3f19}
+  .fine{color:var(--muted);font-size:.78rem;margin-top:12px;font-family:ui-sans-serif,system-ui,sans-serif}
+
+  footer{border-top:3px double var(--line);padding:20px 0 44px;color:var(--muted);font-size:.8rem}
+  footer p{margin:0 0 8px}
+
+  .modal{position:fixed;inset:0;background:rgba(43,33,24,.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:10}
+  .modal.open{display:flex}
+  .modal .card{background:var(--card);border:1px solid var(--line);max-width:440px;width:100%;padding:26px}
+  .modal h3{margin:0 0 8px;font-size:1.1rem}
+  .modal p{font-size:.9rem;color:var(--muted);margin:0 0 16px}
+  .modal a{color:var(--rust)}
+  .modal .close{background:none;border:1px solid var(--line);padding:8px 18px;font-size:.82rem;cursor:pointer;color:var(--ink);font-family:ui-sans-serif,system-ui,sans-serif}
+
+  @media (max-width:600px){ .masthead h1{font-size:1.9rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="dateline sans"><span>Est. 2026</span><span>A monitoring desk for small business</span></div>
+
+  <div class="masthead">
+    <h1>Deadline Desk</h1>
+    <div class="rule"></div>
+    <p>We watch the funders. You hear about the opening the day it happens.</p>
+  </div>
+
+  <section class="lede">
+    <p>Every month, grants and programs open that fit your business almost exactly - and close again before a stale roundup email ever reaches you. The information is public, but it is scattered across dozens of funder pages that change without notice.</p>
+    <p>Deadline Desk does the watching. You tell us what your business is and what you would apply for. We check the funders and agencies that matter, and <b>the day something matching opens - or a deadline moves - you get a dated, sourced note</b> with the link to apply.</p>
+  </section>
+
+  <section class="watchlist">
+    <h2>What a watch covers</h2>
+    <ul>
+      <li>Small-business grant programs - federal, state, and private funders</li>
+      <li>Reopening dates for programs that run in rounds</li>
+      <li>Deadline changes and extensions, flagged the day they appear</li>
+      <li>A verified monthly digest: what is open now, what is closing soon</li>
+    </ul>
+  </section>
+
+  <section class="brief">
+    <div class="bh"><b>A sample note</b><span>Illustrative format</span></div>
+    <p><b>OPENED TODAY -</b> Example Funder Small Business Grant, up to $10,000, for businesses under 10 employees in the Midwest. Applications close Dec 15. Source: funder's program page (linked). Eligibility checked against your profile: <b>likely fit</b> - confirm line 3 before applying.</p>
+    <p>Every note names the funder, the deadline, and the source page. If we cannot fully verify something, it is marked "confirm before applying" - never quietly passed off as checked.</p>
+  </section>
+
+  <section class="offer">
+    <div class="price">$12<span class="per">/month, cancel anytime</span></div>
+    <br>
+    <button type="button" class="buy" id="buybtn">Start my watch - $12/mo</button>
+    <div class="fine">No charge when you click. We are upfront about where we are: new, small, and honest about it.</div>
+  </section>
+
+  <footer>
+    <p>Deadline Desk is an independent monitoring service. We are not affiliated with any funder, agency, or program named in our notes, and nothing we send is financial or legal advice. Programs change; always confirm details on the funder's own page before applying.</p>
+    <p>&copy; 2026 Deadline Desk.</p>
+  </footer>
+</div>
+
+<div class="modal" id="buymodal" role="dialog" aria-modal="true">
+  <div class="card">
+    <h3>We're not taking payment yet</h3>
+    <p>Deadline Desk is a new service and we bring on early customers one at a time. To join the early list, email <a href="mailto:mfcyxd@mail.instinct.com" id="waitlistlink">mfcyxd@mail.instinct.com</a> with a sentence about your business and what you would apply for - first watches start free while we set up billing. Nothing is charged on this page.</p>
+    <button type="button" class="close" id="buyclose">Close</button>
+  </div>
+</div>
+
+<script>
+function track(what){
+  try{
+    if(window.goatcounter && window.goatcounter.count){
+      window.goatcounter.count({path: what, title: what, event: true});
+    }
+    var k = 'dd_' + what;
+    localStorage.setItem(k, (parseInt(localStorage.getItem(k)||'0',10)+1).toString());
+  }catch(e){}
+}
+var modal = document.getElementById('buymodal');
+document.getElementById('buybtn').addEventListener('click', function(){
+  track('buy-intent');
+  modal.classList.add('open');
+});
+document.getElementById('buyclose').addEventListener('click', function(){ modal.classList.remove('open'); });
+modal.addEventListener('click', function(e){ if(e.target === modal){ modal.classList.remove('open'); } });
+var wl = document.getElementById('waitlistlink');
+if(wl){ wl.addEventListener('click', function(){ track('waitlist-click'); }); }
+</script>
+<script data-goatcounter="https://deadlinedesk.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
